@@ -1,0 +1,479 @@
+@font-face { 
+  font-family:"proxima-nova";
+  src:url("https://use.typekit.net/af/1be3c2/00000000000000007735e606/30/l?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n3&v=3") format("woff2"),url("https://use.typekit.net/af/1be3c2/00000000000000007735e606/30/d?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n3&v=3") format("woff"),url("https://use.typekit.net/af/1be3c2/00000000000000007735e606/30/a?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n3&v=3") format("opentype");
+  font-display:swap;
+  font-style:normal;
+  font-weight:300;
+  font-stretch:normal;
+} 
+  body {  
+    font:inherit;
+    line-height:1;
+    font-size:16px;
+    font-family:proxima-nova, Corbel, Arial, sans-serif;
+  }  
+* { 
+    box-sizing: border-box;
+} 
+
+div { 
+    margin: 0px; 
+    padding: 0px; 
+    border: 0px; 
+    font: inherit; 
+    vertical-align: baseline;
+} 
+
+.cYb-prm { 
+    display: block;
+} 
+
+@media (min-width: 1024px){ 
+  div:first-child  { 
+    padding-right: 0px;
+  } 
+}     
+
+body { 
+    margin: 0px; 
+    padding: 0px; 
+    border: 0px; 
+    font: inherit; 
+    vertical-align: baseline;
+} 
+
+body { 
+    line-height: 1;
+} 
+
+body { 
+    font-size: 16px; 
+    font-family: proxima-nova, Corbel, Arial, sans-serif;
+} 
+
+body { 
+    -webkit-font-smoothing: antialiased;
+} 
+
+body { 
+    overflow-y: scroll !important;
+} 
+
+@media (min-width: 1024px){ 
+  body { 
+    padding-right: 0px;
+  } 
+}     
+
+html { 
+    scroll-padding-top: 200px; 
+    scroll-behavior: smooth;
+} 
+
+html { 
+    margin: 0px; 
+    padding: 0px; 
+    border: 0px; 
+    font: inherit; 
+    vertical-align: baseline;
+} 
+
+*,:before,:after { 
+    box-sizing: border-box;
+} 
+
+div:first-child  { 
+    height: 100%;
+} 
+
+footer { 
+    margin: 0px; 
+    padding: 0px; 
+    border: 0px; 
+    font: inherit; 
+    vertical-align: baseline;
+} 
+
+footer { 
+    display: block;
+} 
+
+.bDJ-653 { 
+    max-width: 1270px; 
+    margin: 0px auto; 
+    padding: 20px; 
+    display: flex; 
+    -webkit-box-pack: start; 
+    justify-content: flex-start; 
+    align-items: flex-start; 
+    flex-wrap: wrap;
+} 
+
+@media (min-width: 768px){ 
+  .bDJ-653 { 
+    padding: 40px 20px 20px;
+  } 
+}     
+
+@media (min-width: 992px){ 
+  .bDJ-653 { 
+    padding: 50px 20px 10px;
+  } 
+}     
+
+section { 
+    margin: 0px; 
+    padding: 0px; 
+    border: 0px; 
+    font: inherit; 
+    vertical-align: baseline;
+} 
+
+section { 
+    display: block;
+} 
+
+.hiD-8jv { 
+    width: 100%; 
+    background: rgb(245, 245, 245); 
+    border-top: 1px solid rgb(210, 210, 210); 
+    margin-top: 20px;
+} 
+
+@media (min-width: 768px){ 
+  .hiD-8jv { 
+    margin-top: 0px;
+  } 
+}     
+
+.jjD-9eo { 
+    display: block;
+} 
+
+@media (min-width: 992px){ 
+  .jjD-9eo { 
+    display: none;
+  } 
+}     
+
+.hKR-oni { 
+    display: flex; 
+    -webkit-box-pack: start; 
+    justify-content: flex-start; 
+    align-items: flex-start; 
+    width: 100%;
+} 
+
+.lgx-41k { 
+    flex-basis: 100%;
+} 
+
+@media (min-width: 992px){ 
+  .lgx-41k { 
+    -webkit-box-pack: end; 
+    justify-content: flex-end; 
+    margin-top: -80px;
+  } 
+}     
+
+.czk-aqz { 
+    display: flex; 
+    -webkit-box-pack: justify; 
+    justify-content: space-between; 
+    padding-top: 10px; 
+    margin-top: 30px; 
+    border-top: 1px solid rgb(210, 210, 210); 
+    flex-basis: 100%;
+} 
+
+a { 
+    margin: 0px; 
+    padding: 0px; 
+    border: 0px; 
+    font: inherit; 
+    vertical-align: baseline;
+} 
+
+.jFO-xjw { 
+    text-decoration: none; 
+    color: rgb(0, 0, 0);
+} 
+
+.ddu-dzw { 
+    flex-basis: 16.5%; 
+    pointer-events: auto;
+} 
+
+.eQa-7qi { 
+    flex-basis: initial;
+} 
+
+@media (min-width: 992px){ 
+  .eQa-7qi { 
+    flex-basis: 34%;
+  } 
+}     
+
+p { 
+    margin: 0px; 
+    padding: 0px; 
+    border: 0px; 
+    font: inherit; 
+    vertical-align: baseline;
+} 
+
+.iEz-5bw { 
+    margin: 0px; 
+    padding: 0px; 
+    letter-spacing: 0rem; 
+    font-weight: 300; 
+    font-size: 0.75rem; 
+    line-height: 16px; 
+    color: rgb(16, 17, 26);
+} 
+
+.czk-aqz p  { 
+    color: rgb(97, 105, 112);
+} 
+
+img { 
+    margin: 0px; 
+    padding: 0px; 
+    border: 0px; 
+    font: inherit; 
+    vertical-align: baseline;
+} 
+
+img { 
+    vertical-align: middle;
+} 
+
+ul { 
+    margin: 0px; 
+    padding: 0px; 
+    border: 0px; 
+    font: inherit; 
+    vertical-align: baseline;
+} 
+
+ul { 
+    list-style: none;
+} 
+
+.gvZ-zsn { 
+    flex-basis: 16.5%; 
+    list-style: none; 
+    z-index: 10;
+} 
+
+li { 
+    margin: 0px; 
+    padding: 0px; 
+    border: 0px; 
+    font: inherit; 
+    vertical-align: baseline;
+} 
+
+.krM-mo7 { 
+    margin: 0px; 
+    padding: 0px; 
+    letter-spacing: 0rem; 
+    font-weight: bold; 
+    font-size: 1rem; 
+    line-height: 24px; 
+    color: rgb(16, 17, 26);
+} 
+
+.gvZ-zsn li  { 
+    display: block; 
+    line-height: 34px;
+} 
+
+@media (min-width: 992px){ 
+  .eSi-cpe { 
+    display: flex; 
+    flex-direction: column; 
+    max-width: 130px;
+  } 
+}     
+
+.jdI-vie { 
+    display: block; 
+    line-height: 34px;
+} 
+
+.jyL-moo { 
+    display: grid; 
+    grid-template-columns: repeat(5, 1fr); 
+    -webkit-box-align: center; 
+    align-items: center; 
+    margin: 0px -5px; 
+    gap: 8px;
+} 
+
+span { 
+    margin: 0px; 
+    padding: 0px; 
+    border: 0px; 
+    font: inherit; 
+    vertical-align: baseline;
+} 
+
+.kru-qdk { 
+    color: rgb(16, 17, 26); 
+    text-decoration: none; 
+    display: inline-block; 
+    font-weight: 300;
+} 
+
+.gvZ-zsn li a  { 
+    line-height: 34px;
+} 
+
+.kru-qdk:hover { 
+    text-decoration: underline;
+} 
+
+.dDt-biz { 
+    display: flex; 
+    -webkit-box-align: center; 
+    align-items: center; 
+    flex-wrap: wrap;
+} 
+
+.bWG-xhj { 
+    display: flex; 
+    -webkit-box-align: center; 
+    align-items: center; 
+    -webkit-box-pack: center; 
+    justify-content: center; 
+    width: 100%; 
+    max-width: 80px; 
+    min-height: 48px;
+} 
+
+@media (min-width: 992px){ 
+  .bWG-xhj { 
+    max-width: unset;
+  } 
+}     
+
+.jCt-n4j { 
+    max-width: 100%; 
+    max-height: 48px;
+} 
+
+.hrw-2gk { 
+    margin-bottom: 7px; 
+    padding-right: 7px;
+} 
+
+.hrw-2gk:last-child { 
+    padding-right: 0px;
+} 
+
+.kTH-pno { 
+    width: 100%;
+} 
+
+.iudDZm > span::after { 
+    position: absolute; 
+    background-color: rgb(16, 17, 26); 
+    bottom: -4px; 
+    transform: translateY(6px); 
+    content: ""; 
+    display: none; 
+    height: 3px; 
+    width: 100%;
+} 
+
+.kHrJUF li { 
+    white-space: nowrap;
+} 
+
+
+/* These were inline style tags. Uses id+class to override almost everything */
+#style-TfMR7.style-TfMR7 {  
+   color:transparent;  
+   display:inline-block;  
+}  
+#style-vDWsF.style-vDWsF {  
+   color:transparent;  
+   display:inline-block;  
+}  
+#style-TYe1a.style-TYe1a {  
+   color:transparent;  
+   display:inline-block;  
+}  
+#style-Mjgt2.style-Mjgt2 {  
+   color:transparent;  
+   display:inline-block;  
+}  
+#style-laUvj.style-laUvj {  
+   color:transparent;  
+   display:inline-block;  
+}  
+#style-hQolR.style-hQolR {  
+   color:transparent;  
+   display:inline-block;  
+}  
+#style-AqVck.style-AqVck {  
+   color:transparent;  
+   display:inline-block;  
+}  
+#style-oXvyo.style-oXvyo {  
+   color:transparent;  
+   display:inline-block;  
+}  
+#style-dg7QK.style-dg7QK {  
+   color:transparent;  
+   display:inline-block;  
+}  
+#style-Z4S9p.style-Z4S9p {  
+   color:transparent;  
+   display:inline-block;  
+}  
+#style-z3ML9.style-z3ML9 {  
+   color:transparent;  
+   display:inline-block;  
+}  
+#style-obBJc.style-obBJc {  
+   color:transparent;  
+   display:inline-block;  
+}  
+#style-sBwDw.style-sBwDw {  
+   color:transparent;  
+   display:inline-block;  
+}  
+#style-xaQU9.style-xaQU9 {  
+   color:transparent;  
+   display:inline-block;  
+}  
+#style-6E9XJ.style-6E9XJ {  
+   color:transparent;  
+   display:inline-block;  
+}  
+#style-YoOHr.style-YoOHr {  
+   color:transparent;  
+   display:inline-block;  
+}  
+#style-Wolgq.style-Wolgq {  
+   color:transparent;  
+   display:inline-block;  
+}  
+#style-vjSJz.style-vjSJz {  
+   color:transparent;  
+   display:inline-block;  
+}  
+#style-aXcIY.style-aXcIY {  
+   color:transparent;  
+   display:inline-block;  
+}  
+#style-VQRbl.style-VQRbl {  
+   color:transparent;  
+   display:inline-block;  
+}  
+#style-ldLp5.style-ldLp5 {  
+   color:transparent;  
+   display:inline-block;  
+}  

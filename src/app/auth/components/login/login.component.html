@@ -1,0 +1,165 @@
+<form [formGroup]="loginForm"
+    (ngSubmit)="onLogin()"
+    class="d-flex flex-column justify-content-center align-items-center">
+    <!-- <mat-form-field>
+        <input matInput
+            placeholder="Username"
+            formControlName="username">
+    </mat-form-field> -->
+    <mat-form-field>
+        <input matInput
+            type="email"
+            placeholder="Email"
+            formControlName="email">
+    </mat-form-field>
+    <mat-form-field>
+        <input matInput
+            type="password"
+            placeholder="Password"
+            formControlName="password">
+    </mat-form-field>
+    <button mat-raised-button
+        color="primary"
+        type="submit"
+        [disabled]="!loginForm.valid">Login</button>
+</form>
+<app-social-auth></app-social-auth>
+<!-- <button mat-raised-button
+    color="primary"
+    class="w-auto"
+    (click)="onGoogleAuth()">Continue with Google</button> -->
+<!-- <asl-google-signin-button type='icon'
+    size='medium'></asl-google-signin-button> -->
+
+
+<!-- 
+<div class="container-q3e">
+    <form [formGroup]="loginForm"
+        (ngSubmit)="login()"
+        class="content-f98">
+        <div class="login-xea">
+            <div class="title-k5w py--k9o text-l93">
+                <h2 class="heading-1mq">
+                    Singin
+                </h2>
+            </div>
+            <form id="log-1ar">
+                <input id="username"
+                    formControlName="username"
+                    class="form-control">
+                <div *ngIf="loginForm.get('username')?.invalid && loginForm.get('username')?.touched"
+                    class="text-danger">Username is required.</div>
+                <div>
+                    <div>
+                        <label class="label-2ww"
+                            for="usernameOrEmail">
+                            E-mail
+                        </label>
+                        <input class="input-z29"
+                            placeholder=""
+                            type="text"
+                            name="usernameOrEmail"
+                            value=""
+                            id="use-dz1">
+                    </div>
+                </div>
+                <div class="mt--b9o">
+                    <div>
+                        <label class="label-2ww"
+                            for="password">
+                            Password
+                        </label>
+                        <input class="input-z29"
+                            input
+                            type="password"
+                            id="password"
+                            formControlName="password"
+                            class="form-control">
+                        <div *ngIf="loginForm.get('password')?.invalid && loginForm.get('password')?.touched"
+                            class="text-danger">Password is required.</div>
+                        <a class="link-o18 link-a4f forgot-ttq text-ykw text-zhl"
+                            href="/password">
+                            Forgot my
+                            password
+                        </a>
+                    </div>
+                </div>
+                <div class="mt--b9o">
+                    <div class="captcha-fom">
+                        <div>
+                            <div class="style-AGbln"
+                                id="style-AGbln">
+                                <div>
+                                    <iframe width="304"
+                                        height="78"
+                                        src="https://www.google.com/recaptcha/api2/anchor?ar=1&amp;k=6LdbniUUAAAAAEsr4ncA8SrOrc0vIU8cIGmYWgPW&amp;co=aHR0cHM6Ly9kaXNwbGF0ZS5jb206NDQz&amp;hl=en&amp;v=MHBiAvbtvk5Wb2eTZHoP1dUd&amp;size=normal&amp;cb=rfo5zsy1s0xd">
+                                    </iframe>
+                                </div>
+                                <textarea id="g-r-t4w"
+                                    class="style-qpy5z">
+                </textarea>
+                            </div>
+                            <iframe class="style-W3P5L"
+                                id="style-W3P5L">
+                            </iframe>
+                        </div>
+                    </div>
+                    <p class="hid-nwn">
+                    </p>
+                </div>
+                <hr>
+                <div class="wrapper-he4">
+                    <button type="submit"
+                        [disabled]="loginForm.invalid"
+                        class="button-trd button-x3k button-vx6">
+                        Singin
+                    </button>
+                    <div class="button-trd button-rlk button-7k2 mt--6da"
+                    (click)="signInWithGoogleOneTap()">
+                        Singin with Google
+                    </div>
+                </div>
+            </form>
+        </div>
+        <div class="info-fkd">
+            <h3 class="heading-fnq">
+                Don’t have an account?
+            </h3>
+            <h3 class="heading-h1r">
+                Join Displate community!
+            </h3>
+            <div class="info-23z">
+                <svg class="icon snipcss0-4-33-34"
+                    width="48"
+                    height="48"
+                    viewBox="0 0 48 48"
+                    xmlns:xlink="http://www.w3.org/1999/xlink"
+                    xmlns="http://www.w3.org/2000/svg">
+                    <use xlink:href="https://displate.com/build/sprite-1_7e28a2cd582103108033.svg#icon_register">
+                    </use>
+                </svg>
+                <div>
+                    <h6>
+                        Join as a Customer
+                    </h6>
+                    <ul class="list-8dl text-ykw">
+                        <li>
+                            Save your wishlist picks.
+                        </li>
+                        <li>
+                            Save your order data for next purchases.
+                        </li>
+                        <li>
+                            Be the first one to know about our discounts.
+                        </li>
+                    </ul>
+                    <a routerLink="/auth/signup"
+                        class="link-o18 link-a4f text-ykw text-zhl">
+                        Create a Customer
+                        Account
+                    </a>
+                </div>
+            </div>
+        </div>
+    </form>
+</div> -->

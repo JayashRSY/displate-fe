@@ -4,7 +4,6 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { SharedModule } from './shared/shared.module';
-import { FirebaseAppModule } from '@angular/fire/app';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { HomeComponent } from './pages/home/home.component';
 import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
@@ -49,7 +48,6 @@ import { AuthInterceptor } from './interceptors/auth.interceptor';
     AppRoutingModule,
     NgbModule,
     SharedModule,
-    FirebaseAppModule,
     BrowserAnimationsModule,
     HttpClientModule,
     CustomMaterialModule,

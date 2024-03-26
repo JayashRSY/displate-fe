@@ -1,6 +1,7 @@
 
 export const environment = {
-    apiUrl: "http://localhost:3000/api",
+    // apiUrl: "http://localhost:3000/api",
+    apiUrl: "https://displate-api.vercel.app/",
     cld_name: "drzmhesk3",
     cld_api_secret: "9WcWAom1HqwWUk9X6q2YuzzlztI",
     cld_api_key: "414946216745175",

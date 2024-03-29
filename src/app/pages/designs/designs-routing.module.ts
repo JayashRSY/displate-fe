@@ -2,6 +2,7 @@ import { NgModule } from "@angular/core";
 import { RouterModule, Routes } from "@angular/router";
 import { DesignsComponent } from "./designs.component";
 import { CreateComponent } from "./create/create.component";
+import { ArtistGuard } from "src/app/guards/artist.guard";
 
 const routes: Routes = [
     {
@@ -10,7 +11,8 @@ const routes: Routes = [
     },
     {
         path: 'create',
-        component: CreateComponent
+        component: CreateComponent,
+        canActivate: [ArtistGuard]
     }
 ];
 

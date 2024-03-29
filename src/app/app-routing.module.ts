@@ -10,6 +10,10 @@ import { BrandsComponent } from './pages/brands/brands.component';
 import { AboutComponent } from './pages/about/about.component';
 import { CartComponent } from './pages/cart/cart.component';
 import { WishlistComponent } from './pages/wishlist/wishlist.component';
+import { AdminGuard } from './guards/admin.guard';
+import { UserGuard } from './guards/user.guard';
+import { ArtistGuard } from './guards/artist.guard';
+import { AuthGuard } from './guards/auth.guard';
 
 const routes: Routes = [
   {
@@ -18,7 +22,8 @@ const routes: Routes = [
   },
   {
     path: 'auth',
-    loadChildren: () => import('./auth/auth.module').then(m => m.AuthModule)
+    loadChildren: () => import('./auth/auth.module').then(m => m.AuthModule),
+    canActivate: [AuthGuard]
   },
   {
     path: 'about',
@@ -38,7 +43,7 @@ const routes: Routes = [
   },
   {
     path: 'designs',
-    loadChildren: () => import('./pages/designs/designs.module').then(m => m.DesignsModule)
+    loadChildren: () => import('./pages/designs/designs.module').then(m => m.DesignsModule),
   },
   {
     path: 'events',
@@ -50,15 +55,18 @@ const routes: Routes = [
   },
   {
     path: 'users',
-    component: UsersComponent
+    component: UsersComponent,
+    canActivate: [AdminGuard]
   },
   {
     path: 'cart',
-    component: CartComponent
+    component: CartComponent,
+    canActivate: [UserGuard]
   },
   {
     path: 'wishlist',
-    component: WishlistComponent
+    component: WishlistComponent,
+    canActivate: [UserGuard]
   },
 ];
 

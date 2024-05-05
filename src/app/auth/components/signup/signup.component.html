@@ -1,341 +1,52 @@
 <form [formGroup]="signupForm"
     (ngSubmit)="onSignup()"
-    class="d-flex flex-column justify-content-center align-items-center">
-    <mat-form-field>
-        <input matInput
-            placeholder="Username"
-            formControlName="username">
-    </mat-form-field>
-    <mat-form-field>
-        <input matInput
-            type="email"
-            placeholder="Email"
-            formControlName="email">
-    </mat-form-field>
-    <mat-form-field>
-        <input matInput
-            type="password"
-            placeholder="Password"
-            formControlName="password">
-    </mat-form-field>
-    <button mat-raised-button
-        color="primary"
-        type="submit"
-        [disabled]="!signupForm.valid">Sign Up</button>
+    class="d-flex flex-column align-items-center">
+    <mat-card class="signup-card">
+        <mat-card-header class="text-center">
+            <mat-card-title>Sign Up</mat-card-title>
+        </mat-card-header>
+        <mat-card-content class="row">
+            <mat-form-field appearance="fill"
+                class="input-field">
+                <mat-label>Username</mat-label>
+                <input matInput
+                    placeholder="Enter your username"
+                    formControlName="username">
+                <mat-error *ngIf="signupForm.get('username').invalid && signupForm.get('username').touched">
+                    Please enter a username.
+                </mat-error>
+            </mat-form-field>
+            <mat-form-field appearance="fill"
+                class="input-field">
+                <mat-label>Email</mat-label>
+                <input matInput
+                    type="email"
+                    placeholder="Enter your email"
+                    formControlName="email">
+                <mat-error *ngIf="signupForm.get('email').invalid && signupForm.get('email').touched">
+                    Please enter a valid email address.
+                </mat-error>
+            </mat-form-field>
+            <mat-form-field appearance="fill"
+                class="input-field">
+                <mat-label>Password</mat-label>
+                <input matInput
+                    type="password"
+                    placeholder="Enter your password"
+                    formControlName="password">
+                <mat-error *ngIf="signupForm.get('password').invalid && signupForm.get('password').touched">
+                    Please enter a password.
+                </mat-error>
+            </mat-form-field>
+            <button mat-raised-button
+                color="primary"
+                type="submit"
+                [disabled]="signupForm.invalid"
+                class="submit-button">Sign Up</button>
+        </mat-card-content>
+    </mat-card>
 </form>
-<app-social-auth></app-social-auth>
 
-<!-- 
-<div class="container-lgs">
-    <div class="content-xsi user-2am">
-        <div class="create-brv">
-            <h2 class="heading-812"
-                style="text-align: center">
-                Create an account
-            </h2>
-            <div class="link-odj">
-                <a routerLink="/signup"
-                    class="text-6xk text-5bz text-jf8">
-                    <div class="act-a12 link-o74">
-                        <svg class="icon"
-                            width="48"
-                            height="48"
-                            viewBox="0 0 48 48"
-                            xmlns:xlink="http://www.w3.org/1999/xlink"
-                            xmlns="http://www.w3.org/2000/svg">
-                            <use
-                                xlink:href="https://displate.com/build/sprite-1_7e28a2cd582103108033.svg#icon_register">
-                            </use>
-                        </svg>
-                    </div>
-                    Customer
-                </a>
-            </div>
-            <div class="container-d1g">
-                <form id="for-tc7">
-                    <input type="hidden"
-                        name="accountType"
-                        id="use-ci7"
-                        value="4">
-                    <input type="hidden"
-                        name="registerType"
-                        value="1"
-                        id="reg-lv8">
-                    <div class="mt--yg1 container-a4i popup-njo">
-                        <label class="label-it1"
-                            for="nick">
-                            First name / Nick
-                        </label>
-                        <input class="input-6n1"
-                            placeholder=""
-                            type="text"
-                            id="fir-xem"
-                            name="firstname"
-                            value="">
-                        <p class="input-3ht input-yik">
-                        </p>
-                    </div>
-                    <div class="mt--yg1 container-a4i">
-                        <label class="label-it1"
-                            for="lastname">
-                            Last name (optional)
-                        </label>
-                        <input class="input-6n1"
-                            placeholder=""
-                            type="text"
-                            id="las-8mw"
-                            name="lastname"
-                            value="">
-                        <p class="input-3ht input-yik">
-                        </p>
-                    </div>
-                    <div class="mt--yg1 container-a4i">
-                        <label class="label-it1"
-                            for="email">
-                            E-mail
-                        </label>
-                        <input class="input-6n1"
-                            placeholder=""
-                            type="email"
-                            id="ema-2jr"
-                            name="email"
-                            value="">
-                        <p class="input-3ht input-yik">
-                        </p>
-                    </div>
-                    <div class="mt--yg1 container-a4i popup-njo">
-                        <label class="label-it1"
-                            for="password">
-                            Password
-                        </label>
-                        <input class="input-6n1"
-                            placeholder=""
-                            type="password"
-                            id="pas-lty"
-                            name="password"
-                            value="">
-                        <p class="input-3ht input-yik">
-                        </p>
-                    </div>
-                    <div class="mt--yg1 container-a4i">
-                        <label class="checkbox-3t5"
-                            for="accept_everything">
-                            <input type="checkbox"
-                                id="acc-6z8"
-                                name="accept_everything"
-                                class="checkbox-h14">
-                            <div class="checkbox-nwc">
-                            </div>
-                            <div class="checkbox-ash text-6xk text-5bz">
-                                Accept everything
-                            </div>
-                        </label>
-                    </div>
-                    <div class="container-a4i">
-                        <label class="checkbox-3t5"
-                            for="accept_terms">
-                            <input type="checkbox"
-                                id="acc-52t"
-                                name="accept_terms"
-                                class="checkbox-h14">
-                            <div class="checkbox-nwc">
-                            </div>
-                            <div class="checkbox-ash text-6xk text-5bz">
-                                I accept the
-                                <a class="link-eyi link-n42"
-                                    href="/about-regulations">
-                                    Terms of Use
-                                </a>
-                                and
-                                <a class="link-eyi link-n42"
-                                    href="/about-privacy">
-                                    Privacy policy
-                                </a>
-                                <p class="input-3ht input-yik">
-                                </p>
-                            </div>
-                        </label>
-                    </div>
-                    <div>
-                        <label class="checkbox-3t5"
-                            for="accept_offers">
-                            <input type="checkbox"
-                                id="acc-ipb"
-                                name="accept_offers"
-                                class="checkbox-h14">
-                            <div class="checkbox-nwc">
-                            </div>
-                            <div class="content-rij content-tfe checkbox-ash text-6xk text-5bz">
-                                Sign me up for exclusive deals, new arrivals,
-                                <br>
-                                and a whole lot of geeky stuff
-                            </div>
-                            <div class="content-rij checkbox-ash text-6xk text-5bz">
-                                I would like to receive e-mails with special offers,
-                                <br>
-                                contests and tips for Shop.
-                            </div>
-                        </label>
-                    </div>
-                    <div class="mt--yg1 container-a4i">
-                        <div class="captcha-n6p">
-                            <div>
-                                <div id="style-1hCXT"
-                                    class="style-1hCXT">
-                                    <div>
-                                        <iframe width="304"
-                                            height="78"
-                                            src="https://www.google.com/recaptcha/api2/anchor?ar=1&amp;k=6LdbniUUAAAAAEsr4ncA8SrOrc0vIU8cIGmYWgPW&amp;co=aHR0cHM6Ly9kaXNwbGF0ZS5jb206NDQz&amp;hl=en&amp;v=MHBiAvbtvk5Wb2eTZHoP1dUd&amp;size=normal&amp;cb=za631drup97l">
-                                        </iframe>
-                                    </div>
-                                    <textarea id="g-r-52l"
-                                        class="style-56Oso">
-                  </textarea>
-                                </div>
-                                <iframe id="style-cI85D"
-                                    class="style-cI85D">
-                                </iframe>
-                            </div>
-                        </div>
-                        <p class="input-3ht input-yik">
-                        </p>
-                    </div>
-                    <hr>
-                    <div class="mt--yg1">
-                        <button type="submit"
-                            class="button-gve button-zqc">
-                            Create an account
-                        </button>
-                        <a class="link-eyi link-n42 back-9e9"
-                            routerLink="/auth/login">
-                            I already have an account
-                        </a>
-                    </div>
-                </form>
-                <div class="container-ndo">
-                    <div class="text-6xk text-2ma hint-8fo">
-                        <p class="content-rij">
-                            Your Shop profile will be public to let your potential customers find you.
-                        </p>
-                        <p class="content-rij content-tfe">
-                            Your User profile will be public to let your potential customers find you.
-                        </p>
-                    </div>
-                    <div class="text-6xk text-2ma link-ndr">
-                        <p>
-                            Your displate link must be unique.
-                        </p>
-                    </div>
-                    <div class="text-6xk text-2ma hint-moj">
-                        <span class="text-6xk text-2ma">
-                            At least:
-                        </span>
-                        <ul class="list-xog text-6xk text-2ma">
-                            <li class="item-1oc">
-                                1 capital letter
-                            </li>
-                            <li class="item-1oc">
-                                1 special character (e.g. ! or #;)
-                            </li>
-                            <li class="item-1oc">
-                                6 characters long
-                            </li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-            <div class="create-details--n89">
-                The Controller of your personal data is GWD Concept Sp. z o.o., operating under the business name
-                Displate.
-                Your personal data will be processed in order to set up and administer your account.
-                To see full information on the processing of your personal data, including information on your rights,
-                <a href="/about-privacy"
-                    class="link-eyi link-n42">
-                    click here
-                </a>
-                .
-            </div>
-        </div>
-        <div class="wrapper-v83">
-            <div>
-                <h4>
-                    Are you planning
-                    <br>
-                    to buy Displates?
-                </h4>
-                <hr>
-                <h6>
-                    Create a Customer account
-                </h6>
-                <ul class="list-xog">
-                    <li>
-                        Save your wishlist picks.
-                    </li>
-                    <li>
-                        Save your order data for next purchases.
-                    </li>
-                    <li>
-                        Be the first to know about our discounts.
-                    </li>
-                    <li>
-                        Customize Displate Home Page and see the Displates that you like in one place.
-                    </li>
-                </ul>
-            </div>
-        </div>
-        <div class="popup-mwo popup-8lb">
-            <div class="wrapper-s1l">
-                <div class="header-lcq">
-                    Your profile
-                    <div class="popup-hi4">
-                    </div>
-                </div>
-                <div class="content-eag content-rij mb--2g3">
-                    Your Shop profile will be public to let your potential customers find you.
-                </div>
-            </div>
-        </div>
-        <div class="popup-mwo popup-8lb">
-            <div class="wrapper-s1l">
-                <div class="header-lcq">
-                    <span class="content-rij content-tfe">
-                        Displate link
-                    </span>
-                    <span class="content-rij">
-                        Your Displate profile
-                    </span>
-                    <div class="popup-hi4">
-                    </div>
-                </div>
-                <div class="content-eag mb--2g3">
-                    Your Displate link has to be unique.
-                </div>
-            </div>
-        </div>
-        <div class="popup-mwo popup-8lb">
-            <div class="wrapper-s1l">
-                <div class="header-lcq">
-                    Password requirements
-                    <div class="popup-hi4">
-                    </div>
-                </div>
-                <div class="content-eag mb--2g3">
-                    At least:
-                    <ul class="list-xog text-6xk text-2ma">
-                        <li class="item-1oc">
-                            1 capital letter
-                        </li>
-                        <li class="item-1oc">
-                            1 special character (e.g. ! or #;)
-                        </li>
-                        <li class="item-1oc">
-                            6 characters long
-                        </li>
-                    </ul>
-                </div>
-            </div>
-        </div>
-    </div>
+<div class="d-flex justify-content-center m-5">
+    <app-social-auth></app-social-auth>
 </div>
-
- -->

@@ -28,6 +28,8 @@ export class SocialAuthComponent implements OnInit {
           } else {
             this._toastr.error(res.message, 'Error!');
           }
+        }, (error) => {
+          this._toastr.error(error.error.message, 'Error')
         })
       } else {
         this._toastr.info('No user logged in', 'Info!');

@@ -25,6 +25,8 @@ export class DesignsComponent implements OnInit {
       } else {
         this._toastr.error(res.message, 'Error!');
       }
-    });
+    }, (error) => {
+      this._toastr.error(error.error.message, 'Error')
+    })
   }
 }

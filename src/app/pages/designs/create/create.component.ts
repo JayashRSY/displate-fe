@@ -58,7 +58,9 @@ export class CreateComponent {
       this._uploadService.uploadImages(dataFiles).subscribe(res => {
         uploadedUrls.push(res.secure_url);
         this.form.patchValue({ designURLs: uploadedUrls });
-      });
+      }, (error) => {
+        this._toastr.error(error.error.message, 'Error')
+      })
     }
   }
   onSubmit() {
@@ -75,6 +77,8 @@ export class CreateComponent {
       } else {
         this._toastr.error(res.message, 'Error!');
       }
+    }, (error) => {
+      this._toastr.error(error.error.message, 'Error')
     })
   }
 }

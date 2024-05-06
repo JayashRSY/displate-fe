@@ -22,7 +22,9 @@ export class CartComponent implements OnInit {
       } else {
         this._toastr.error(res.message, 'Error');
       }
-    });
+    }, (error) => {
+      this._toastr.error(error.error.message, 'Error')
+    })
   }
   removeFromCart(item: any) {
     const payload = {
@@ -36,7 +38,9 @@ export class CartComponent implements OnInit {
       } else {
         this._toastr.error(res.message, 'Error');
       }
-    });
+    }, (error) => {
+      this._toastr.error(error.error.message, 'Error')
+    })
   }
 
   emptyCart() {
@@ -47,6 +51,8 @@ export class CartComponent implements OnInit {
       } else {
         this._toastr.error(res.message, 'Error');
       }
+    }, (error) => {
+      this._toastr.error(error.error.message, 'Error')
     })
   }
   increaseQuantity(item: any) {
@@ -61,7 +67,9 @@ export class CartComponent implements OnInit {
       } else {
         this._toastr.error(res.message, 'Error');
       }
-    });
+    }, (error) => {
+      this._toastr.error(error.error.message, 'Error')
+    })
   }
 
   decreaseQuantity(item: any) {
@@ -77,7 +85,9 @@ export class CartComponent implements OnInit {
         } else {
           this._toastr.error(res.message, 'Error');
         }
-      });
+      }, (error) => {
+        this._toastr.error(error.error.message, 'Error')
+      })
     } else {
       const payload = {
         productId: item.product._id,
@@ -90,7 +100,9 @@ export class CartComponent implements OnInit {
         } else {
           this._toastr.error(res.message, 'Error');
         }
-      });
+      }, (error) => {
+        this._toastr.error(error.error.message, 'Error')
+      })
     }
   }
   buyNow() {

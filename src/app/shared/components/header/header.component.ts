@@ -51,6 +51,8 @@ export class HeaderComponent implements OnInit {
         this.getWishlistItems()
         this.getCartItems()
       }
+    }, (error) => {
+      this._toastr.error(error.error.message, 'Error')
     })
   }
   getWishlistItems() {
@@ -61,6 +63,8 @@ export class HeaderComponent implements OnInit {
       } else {
         this._toastr.error(res.message, 'Error!');
       }
+    }, (error) => {
+      this._toastr.error(error.error.message, 'Error')
     });
   }
   getCartItems() {
@@ -71,7 +75,9 @@ export class HeaderComponent implements OnInit {
       } else {
         this._toastr.error(res.message, 'Error!');
       }
-    });
+    }, (error) => {
+      this._toastr.error(error.error.message, 'Error')
+    })
   }
   onLogout() {
     this._authService.logout();

@@ -22,7 +22,9 @@ export class WishlistComponent implements OnInit {
       } else {
         this._toastr.error(res.message, 'Error');
       }
-    });
+    }, (error) => {
+      this._toastr.error(error.error.message, 'Error')
+    })
   }
   removeFromWishlist(item: any) {
     const payload = {
@@ -35,7 +37,9 @@ export class WishlistComponent implements OnInit {
       } else {
         this._toastr.error(res.message, 'Error');
       }
-    });
+    }, (error) => {
+      this._toastr.error(error.error.message, 'Error')
+    })
   }
 
   emptyWishlist() {
@@ -46,6 +50,8 @@ export class WishlistComponent implements OnInit {
       } else {
         this._toastr.error(res.message, 'Error');
       }
+    }, (error) => {
+      this._toastr.error(error.error.message, 'Error')
     })
   }
 }

@@ -6,16 +6,26 @@ import { SharedService } from '../shared/shared.service';
   providedIn: 'root'
 })
 export class DataService {
-  private wishlistDataSubject: BehaviorSubject<any> = new BehaviorSubject<any>([]);
+  private wishlistCountSubject: BehaviorSubject<any> = new BehaviorSubject<number>(0);
+  private cartCountSubject: BehaviorSubject<any> = new BehaviorSubject<number>(0);
 
   constructor(private http: SharedService) { }
 
-  setWishlistData(wishlist: Observable<any>): void {
-    this.wishlistDataSubject.next(wishlist);
+  setWishlistCount(count: number): void {
+    this.wishlistCountSubject.next(count);
   }
-  getWishlistData(): Observable<any> {
-    return this.wishlistDataSubject.asObservable();
+  getWishlistCount(): Observable<any> {
+    return this.wishlistCountSubject.asObservable();
   }
+
+  setCartCount(count: number): void {
+    console.log("🚀 ~ file: data.service.ts:22 ~ count:", count);
+    this.cartCountSubject.next(count);
+  }
+  getCartCount(): Observable<any> {
+    return this.cartCountSubject.asObservable();
+  }
+
 
   // USER
   getAllUsers(): Observable<any> {

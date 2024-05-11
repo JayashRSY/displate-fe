@@ -23,8 +23,8 @@ import { ToastrService } from 'ngx-toastr';
 })
 export class HeaderComponent implements OnInit {
   loginData$: Observable<any>;
-  wishlistItems = [];
-  cartItems = [];
+  wishlistCount$: Observable<number>
+  cartCount$: Observable<number>
 
   showSearch: boolean = true;
   showJoin: boolean = false;
@@ -46,38 +46,8 @@ export class HeaderComponent implements OnInit {
   ) { }
   ngOnInit(): void {
     this.loginData$ = this._authService.getLoginData();
-    this.loginData$.subscribe(res => {
-      if (res) {
-        this.getWishlistItems()
-        this.getCartItems()
-      }
-    }, (error) => {
-      this._toastr.error(error.error.message, 'Error')
-    })
-  }
-  getWishlistItems() {
-    this._dataService.getWishlist().subscribe(res => {
-      if (res.success) {
-        this.wishlistItems = res.data;
-        this._toastr.success(res.message, 'Success!');
-      } else {
-        this._toastr.error(res.message, 'Error!');
-      }
-    }, (error) => {
-      this._toastr.error(error.error.message, 'Error')
-    });
-  }
-  getCartItems() {
-    this._dataService.getCart().subscribe(res => {
-      if (res.success) {
-        this.cartItems = res.data;
-        this._toastr.success(res.message, 'Success!');
-      } else {
-        this._toastr.error(res.message, 'Error!');
-      }
-    }, (error) => {
-      this._toastr.error(error.error.message, 'Error')
-    })
+    this.wishlistCount$ = this._dataService.getWishlistCount();
+    this.cartCount$ = this._dataService.getCartCount();
   }
   onLogout() {
     this._authService.logout();

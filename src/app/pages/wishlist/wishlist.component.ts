@@ -30,7 +30,7 @@ export class WishlistComponent implements OnInit {
     const payload = {
       productId: item._id,
     }
-    this._dataService.removeFromCart(payload).subscribe(res => {
+    this._dataService.removeFromWishlist(payload).subscribe(res => {
       if (res.success) {
         this.getWishlistItems()
         this._toastr.success(res.message, 'Success');

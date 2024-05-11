@@ -892,7 +892,7 @@
                     <a class="jFO-gxg iGx-ohh"
                         href="/wishlist">
                         <span class="bpI-v7k">
-                            <mat-icon [matBadge]="wishlistItems.length"
+                            <mat-icon [matBadge]="(wishlistCount$ | async) || 0"
                                 matBadgeColor="warn">favorite_border</mat-icon>
                             <p class="hPV-1hv QoE-5li">
                                 Wishlist
@@ -904,9 +904,8 @@
                     <a class="jFO-gxg iGx-ohh"
                         href="/cart">
                         <span class="bpI-v7k">
-                            <mat-icon [matBadge]="cartItems.length"
+                            <mat-icon [matBadge]="(cartCount$ | async) || 0"
                                 matBadgeColor="warn">add_shopping_cart</mat-icon>
-
                             <p class="hPV-1hv QoE-5li">
                                 Cart
                             </p>
@@ -1842,7 +1841,7 @@
                     <a class="jFO-rd5 iGx-xwl"
                         href="/wishlist">
                         <span class="bpI-p3a">
-                            <mat-icon [matBadge]="wishlistItems.length"
+                            <mat-icon [matBadge]="(wishlistCount$ | async) || 0"
                                 matBadgeColor="warn">favorite_border</mat-icon>
                             <p class="hPV-kq9 QoE-nmo">
                                 Wishlist
@@ -1854,9 +1853,8 @@
                     <a class="jFO-rd5 iGx-xwl"
                         href="/cart">
                         <span class="bpI-p3a">
-                            <mat-icon [matBadge]="cartItems.length"
+                            <mat-icon [matBadge]="(cartCount$ | async) || 0"
                                 matBadgeColor="warn">add_shopping_cart</mat-icon>
-
                             <p class="hPV-kq9 QoE-nmo">
                                 Cart
                             </p>

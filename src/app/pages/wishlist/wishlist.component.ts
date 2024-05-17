@@ -18,6 +18,7 @@ export class WishlistComponent implements OnInit {
     this._dataService.getWishlist().subscribe((res: any) => {
       if (res.success) {
         this.wishlistItems = res.data;
+        this._dataService.setWishlistCount(this.wishlistItems.length)
         this._toastr.success(res.message, 'Success');
       } else {
         this._toastr.error(res.message, 'Error');
@@ -32,7 +33,8 @@ export class WishlistComponent implements OnInit {
     }
     this._dataService.removeFromWishlist(payload).subscribe(res => {
       if (res.success) {
-        this.getWishlistItems()
+        this.wishlistItems = this.wishlistItems.filter((i: any) => i._id !== item._id);
+        this._dataService.setWishlistCount(this.wishlistItems.length)
         this._toastr.success(res.message, 'Success');
       } else {
         this._toastr.error(res.message, 'Error');
@@ -46,6 +48,7 @@ export class WishlistComponent implements OnInit {
     this._dataService.emptyWishlist().subscribe(res => {
       if (res.success) {
         this.wishlistItems = [];
+        this._dataService.setWishlistCount(this.wishlistItems.length)
         this._toastr.success(res.message, 'Success');
       } else {
         this._toastr.error(res.message, 'Error');

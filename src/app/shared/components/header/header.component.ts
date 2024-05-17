@@ -45,9 +45,35 @@ export class HeaderComponent implements OnInit {
     private _toastr: ToastrService
   ) { }
   ngOnInit(): void {
+    if(localStorage.getItem('user')) {
+      this.getWishlistItems()
+      this.getCartItems()
+    }
     this.loginData$ = this._authService.getLoginData();
     this.wishlistCount$ = this._dataService.getWishlistCount();
     this.cartCount$ = this._dataService.getCartCount();
+  }
+  getWishlistItems() {
+    this._dataService.getWishlist().subscribe((res: any) => {
+      if (res.success) {
+        this._dataService.setWishlistCount(res.data.length)
+      } else {
+        this._toastr.error(res.message, 'Error');
+      }
+    }, (error) => {
+      this._toastr.error(error.error.message, 'Error')
+    })
+  }
+  getCartItems() {
+    this._dataService.getCart().subscribe((res: any) => {
+      if (res.success) {
+        this._dataService.setCartCount(res.data.length)
+      } else {
+        this._toastr.error(res.message, 'Error');
+      }
+    }, (error) => {
+      this._toastr.error(error.error.message, 'Error')
+    })
   }
   onLogout() {
     this._authService.logout();

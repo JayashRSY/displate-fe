@@ -10,7 +10,7 @@ import { DataService } from 'src/app/services/data.service';
 export class CartComponent implements OnInit {
   cartItems = [];
   constructor(private _dataService: DataService, private _toastr: ToastrService) { }
-  
+
   ngOnInit(): void {
     this.getCartItems()
   }
@@ -28,16 +28,12 @@ export class CartComponent implements OnInit {
     })
   }
   removeFromCart(item: any) {
-    console.log("🚀 ~ file: cart.component.ts:12 ~ cartItems:", this.cartItems);
-    console.log("🚀 ~ file: cart.component.ts:31 ~ item:", item);
     const payload = {
       productId: item.product._id,
     }
     this._dataService.removeFromCart(payload).subscribe(res => {
       if (res.success) {
-        this.cartItems = this.cartItems.filter(item=> {
-          return item.product._id !== payload.productId
-        })
+        this.cartItems = this.cartItems.filter(i => i.product._id !== item.product._id)
         this._dataService.setCartCount(this.cartItems.length)
         this._toastr.success(res.message, 'Success');
       } else {
@@ -47,11 +43,12 @@ export class CartComponent implements OnInit {
       this._toastr.error(error.error.message, 'Error')
     })
   }
-  
+
   emptyCart() {
     this._dataService.emptyCart().subscribe(res => {
       if (res.success) {
         this.cartItems = [];
+        this._dataService.setCartCount(this.cartItems.length)
         this._toastr.success(res.message, 'Success');
       } else {
         this._toastr.error(res.message, 'Error');

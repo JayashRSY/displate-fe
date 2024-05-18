@@ -2,8 +2,10 @@
 export const environment = {
     apiUrl: window.location.hostname === 'localhost' ? 'http://localhost:3000/api' : 'https://displate-be.vercel.app/api',
     cld_name: "drzmhesk3",
+    upload_preset: "kalabhavan",
     cld_api_secret: "9WcWAom1HqwWUk9X6q2YuzzlztI",
     cld_api_key: "414946216745175",
+
     googleClientID: "709452327599-ks9gb4i9hf9f9nungnfhl2u2pqc67iic.apps.googleusercontent.com",
 
     firebaseConfig: {

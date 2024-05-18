@@ -53,7 +53,7 @@ export class CreateComponent {
       const fileData = file;
       const dataFiles = new FormData();
       dataFiles.append('file', fileData);
-      dataFiles.append('upload_preset', 'displate');
+      dataFiles.append('upload_preset', environment.upload_preset);
       dataFiles.append('cloud_name', environment.cld_name);
       this._uploadService.uploadImages(dataFiles).subscribe(res => {
         uploadedUrls.push(res.secure_url);

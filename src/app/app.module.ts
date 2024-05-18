@@ -26,6 +26,10 @@ import { RequestInterceptor } from './interceptors/request.interceptor';
 import { CartComponent } from './pages/cart/cart.component';
 import { WishlistComponent } from './pages/wishlist/wishlist.component';
 import { AuthInterceptor } from './interceptors/auth.interceptor';
+import { CategoryComponent } from './pages/home/sections/category/category.component';
+import { NewsletterComponent } from './pages/home/sections/newsletter/newsletter.component';
+import { FilterPanelComponent } from './components/filter-panel/filter-panel.component';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -42,11 +46,16 @@ import { AuthInterceptor } from './interceptors/auth.interceptor';
     PosterCardComponent,
     CartComponent,
     WishlistComponent,
+    CategoryComponent,
+    NewsletterComponent,
+    FilterPanelComponent,
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     NgbModule,
+    FormsModule,
+    ReactiveFormsModule,
     SharedModule,
     BrowserAnimationsModule,
     HttpClientModule,

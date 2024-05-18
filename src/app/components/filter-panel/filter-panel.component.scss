@@ -1,0 +1,40 @@
+.filter-panel {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  padding: 1rem;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  margin-left: 1.5rem;
+}
+
+.filter-item {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.color-filter {
+  display: flex;
+  justify-content: flex-start;
+  flex-wrap: wrap;
+  .color-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    .color-item {
+      height: 24px;
+      width: 24px;
+      border-radius: 24px;
+      cursor: pointer;
+    }
+
+    .color-label {
+      font-size: 12px;
+      line-height: 20px;
+      text-transform: capitalize;
+      white-space: nowrap;
+    }
+  }
+}

@@ -10,6 +10,8 @@ import { MatChipsModule } from '@angular/material/chips';
 import { MatToolbarModule } from '@angular/material/toolbar';
 import { MatProgressSpinnerModule } from '@angular/material/progress-spinner';
 import { MatBadgeModule } from '@angular/material/badge';
+import { MatRadioModule } from '@angular/material/radio';
+
 
 const MATERIAL_MODULES: any = [
   MatButtonModule,
@@ -22,7 +24,8 @@ const MATERIAL_MODULES: any = [
   MatChipsModule,
   MatToolbarModule,
   MatProgressSpinnerModule,
-  MatBadgeModule
+  MatBadgeModule,
+  MatRadioModule
 ];
 @NgModule({
   declarations: [],

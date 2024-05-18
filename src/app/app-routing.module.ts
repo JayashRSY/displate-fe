@@ -20,6 +20,11 @@ const routes: Routes = [
     path: '',
     component: HomeComponent
   },
+  // {
+  //   path: '**',
+  //   redirectTo: '',
+  //   pathMatch: 'full'
+  // },
   {
     path: 'auth',
     loadChildren: () => import('./auth/auth.module').then(m => m.AuthModule),
@@ -44,6 +49,7 @@ const routes: Routes = [
   {
     path: 'designs',
     loadChildren: () => import('./pages/designs/designs.module').then(m => m.DesignsModule),
+    canActivate: [ArtistGuard]
   },
   {
     path: 'events',
@@ -68,6 +74,11 @@ const routes: Routes = [
     component: WishlistComponent,
     canActivate: [UserGuard]
   },
+  {
+    path: '**',
+    redirectTo: '',
+    pathMatch: 'full'
+  }
 ];
 
 @NgModule({

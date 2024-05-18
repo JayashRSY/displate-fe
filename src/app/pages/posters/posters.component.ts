@@ -17,8 +17,8 @@ export class PostersComponent implements OnInit {
 
   ngOnInit(): void {
     this.getAllDesigns()
-    this._dataService.getCartCount().subscribe(count=> {
-      
+    this._dataService.getCartCount().subscribe(count => {
+
     })
   }
   getAllDesigns() {
@@ -61,5 +61,8 @@ export class PostersComponent implements OnInit {
     }, (error) => {
       this._toastr.error(error.error.message, 'Error')
     })
+  }
+  applyFilters(event) {
+    console.log(event)
   }
 }

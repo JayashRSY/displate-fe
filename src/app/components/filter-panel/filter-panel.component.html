@@ -1,0 +1,52 @@
+<div class="filter-panel">
+    <!-- Category Dropdown -->
+    <mat-form-field appearance="fill"
+        class="filter-item">
+        <mat-label>Category</mat-label>
+        <mat-select [(value)]="selectedCategory"
+            (onchange)="onApplyFilter()">
+            <mat-option *ngFor="let category of categories"
+                [value]="category">{{ category }}</mat-option>
+        </mat-select>
+    </mat-form-field>
+
+    <!-- Color Palette -->
+    <div class="filter-item">
+        <h2>Color:</h2>
+        <div class="color-filter">
+            <div class="col-4 color-container"
+                *ngFor="let color of colors">
+                <div class="color-item"
+                    (click)="selectColor(color)"
+                    [style.background]="color.value">
+                    <div></div>
+                </div>
+                <p class="color-label">{{ color.label }}</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Orientation Radio Buttons -->
+    <div class="filter-item">
+        <h2>Orientation:</h2>
+        <mat-radio-group [(ngModel)]="selectedOrientation"
+            (onchange)="onApplyFilter()">
+            <mat-radio-button *ngFor="let orientation of orientations"
+                [value]="orientation">
+                {{ orientation }}
+            </mat-radio-button>
+        </mat-radio-group>
+    </div>
+
+    <!-- Type Radio Buttons -->
+    <div class="filter-item">
+        <h2>Type:</h2>
+        <mat-radio-group [(ngModel)]="selectedType"
+            (onchange)="onApplyFilter()">
+            <mat-radio-button *ngFor="let type of types"
+                [value]="type">
+                {{ type }}
+            </mat-radio-button>
+        </mat-radio-group>
+    </div>
+</div>

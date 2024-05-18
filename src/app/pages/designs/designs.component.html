@@ -1,9 +1,13 @@
-<p>designs works!</p>
-<li class="btn btn-primary"
-    routerLink="/designs/create">Create</li>
+<div class="px-4 d-flex flex-row-reverse">
+    <button mat-raised-button
+        color="primary"
+        routerLink="/designs/create">
+        Create New
+    </button>
 
+</div>
 <div class="card-container">
-    <div class="card"
+    <mat-card class="card"
         *ngFor="let design of designs">
         <img [src]="design.url"
             alt="Design design"
@@ -12,5 +16,5 @@
             <h5 class="card-title">{{ design.title }}</h5>
             <p class="card-text">{{ design.description }}</p>
         </div>
-    </div>
+    </mat-card>
 </div>

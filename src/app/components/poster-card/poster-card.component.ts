@@ -12,12 +12,17 @@ export class PosterCardComponent implements OnInit {
   @Input() poster: any;
   @Output() onAddToWishlist: EventEmitter<any> = new EventEmitter<any>();;
   @Output() onAddToCart: EventEmitter<any> = new EventEmitter<any>();;
+  isLiked: boolean = false;
 
   constructor(private el: ElementRef) { }
 
   ngOnInit() {
     VanillaTilt.init(
-      this.el.nativeElement.querySelectorAll(".tilt-zone"), { max: 20, speed: 300, scale: 1.05 }
+      this.el.nativeElement.querySelectorAll(".tilt-zone"), {
+      max: 20,
+      speed: 300,
+      scale: 1.1,
+    }
     );
   }
 }

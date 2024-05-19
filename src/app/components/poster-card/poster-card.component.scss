@@ -4,7 +4,7 @@
   height: 420px;
   // margin: auto;
   .poster-container {
-    padding: 10px 20px;
+    padding: 0px 20px 10px 20px;
     margin: 10px;
     transition: all 0.5s ease;
     .fav-btn {
@@ -22,11 +22,14 @@
       cursor: pointer;
     }
     .tilt-zone {
+      :hover {
+        cursor: pointer;
+      }
       .poster-image {
         border-radius: 2%;
         outline: 2px solid rgba(255, 255, 255, 0.25);
         outline-offset: -2px;
-        box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+        box-shadow: 0 5px 10px rgba(0, 0, 0, 0.3);
         width: 200px;
         height: 300px;
       }
@@ -34,7 +37,7 @@
     .cart-btn {
       visibility: hidden;
       display: inline-block;
-      margin-top: 20px;
+      margin-top: 30px;
       cursor: pointer;
       display: flex;
       justify-content: center;
@@ -46,11 +49,7 @@
   .poster-container:hover {
     background: white;
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-    .tilt-zone {
-      .poster-image {
-        box-shadow: none;
-      }
-    }
+
     .cart-btn {
       visibility: visible;
     }

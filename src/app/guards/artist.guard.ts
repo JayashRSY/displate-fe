@@ -1,8 +1,8 @@
 import { Injectable } from "@angular/core";
 import { CanActivate, Router, ActivatedRouteSnapshot, RouterStateSnapshot, UrlTree } from "@angular/router";
 import { AuthService } from "../auth/auth.service";
-import { Observable } from "rxjs";
-import { map } from "rxjs/operators";
+import { Observable, of } from "rxjs";
+import { catchError, map } from "rxjs/operators";
 import { ToastrService } from "ngx-toastr";
 import { Roles } from "../constants/constants";
 
@@ -27,6 +27,10 @@ export class ArtistGuard implements CanActivate {
           this.toastr.info("Only artists/admins allowed", "Info");
           return this.router.createUrlTree(["/"]);
         }
+      }),
+      catchError(() => {
+        this.toastr.info("Only artists/admins allowed", "Info");
+        return of(this.router.createUrlTree(["/"]));
       })
     );
   }

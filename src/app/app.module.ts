@@ -30,6 +30,8 @@ import { CategoryComponent } from './pages/home/sections/category/category.compo
 import { NewsletterComponent } from './pages/home/sections/newsletter/newsletter.component';
 import { FilterPanelComponent } from './components/filter-panel/filter-panel.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { CollectionCardComponent } from './components/collection-card/collection-card.component';
+import { BrandCardComponent } from './components/brand-card/brand-card.component';
 
 @NgModule({
   declarations: [
@@ -49,6 +51,8 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
     CategoryComponent,
     NewsletterComponent,
     FilterPanelComponent,
+    CollectionCardComponent,
+    BrandCardComponent,
   ],
   imports: [
     BrowserModule,
